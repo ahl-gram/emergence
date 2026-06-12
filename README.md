@@ -1,6 +1,6 @@
 # Emergence
 
-**Fifteen tiny worlds. Simple rules. Complex behavior.**
+**Tiny worlds. Simple rules. Complex behavior.**
 
 ![Gray-Scott Turing patterns running in Emergence](docs/screenshot-turing.png)
 
@@ -22,9 +22,9 @@ None of these simulations contain the thing they produce.
 
 The flocking code has no concept of a flock — only three steering urges per bird. The segregation model contains no segregationist — only mild individual preferences. The traffic model has no jam scheduler — only drivers reacting to the car ahead. The pattern you see is not written anywhere in the program. It *emerges* from many local interactions, and that gap — between what the rules say and what the system does — is the whole subject.
 
-That makes these fifteen worlds a useful intuition pump for any system of interacting agents: markets, epidemics, neighborhoods, server fleets, and (see below) multi-agent AI systems.
+That makes these little worlds a useful intuition pump for any system of interacting agents: markets, epidemics, neighborhoods, server fleets, and (see below) multi-agent AI systems.
 
-## The fifteen models
+## The models
 
 | Model | The local rule | What emerges |
 |---|---|---|
@@ -43,6 +43,9 @@ That makes these fifteen worlds a useful intuition pump for any system of intera
 | **Coral Growth (DLA)** | Random-walk in; freeze on first touch | Branching fractals from pure probability |
 | **Fireflies** | Seeing a flash nudges your clock forward | The whole field pulsing as one heartbeat |
 | **Turing Patterns** | Two chemicals react and diffuse | Leopard spots, stripes, endless mitosis |
+| **Ising Magnet** | Agree with your neighbors, unless heat flips you | A sharp phase transition at T ≈ 2.27 |
+| **Cooperation Wars** | Play Prisoner's Dilemma, copy your best neighbor | Cooperation surviving in fractal clusters |
+| **Wealth Condensation** | Wager a slice of the poorer partner's wealth, fair coin | Extreme inequality from perfectly fair rules |
 
 Each sim's sidebar explains its rule and suggests an experiment (`try:`). The chart below the canvas plots the system's *order parameter* over time — watching polarization climb as a flock forms, or the predator-prey waves chase each other, is half the fun.
 
@@ -87,7 +90,7 @@ interface Simulation<S> {
 
 All randomness flows through a seeded `Rng` whose internal state rides inside the sim state as a plain number (`Rng.fromState(s.rngState)` … `rng.state()`). Same seed, same params ⇒ bit-identical run, in the browser and in Node.
 
-## Adding a sixteenth world
+## Adding your own world
 
 1. Copy the shape of `src/sims/life.ts` (the smallest one).
 2. Keep `init`/`step` pure; build new typed arrays, return new state.
@@ -109,4 +112,4 @@ None of these are flaky, because nothing is random at test time — randomness i
 
 ---
 
-Built autonomously by Claude (Fable 5) in one session, 2026-06-12 — fifteen simulations, 121 tests, ~4k lines of TypeScript. Zero runtime dependencies; the only things `npm install` fetches are the TypeScript compiler and Node type stubs.
+Built autonomously by Claude (Fable 5), starting 2026-06-12. Zero runtime dependencies; the only things `npm install` fetches are the TypeScript compiler and Node type stubs.

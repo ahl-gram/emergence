@@ -14,6 +14,9 @@ import { dla } from "../sims/dla.js";
 import { fireflies } from "../sims/fireflies.js";
 import { grayScott } from "../sims/grayScott.js";
 import { brain } from "../sims/brain.js";
+import { ising } from "../sims/ising.js";
+import { dilemma } from "../sims/dilemma.js";
+import { wealth } from "../sims/wealth.js";
 
 export const sims: AnySimulation[] = [
   life as AnySimulation,
@@ -31,6 +34,9 @@ export const sims: AnySimulation[] = [
   dla as AnySimulation,
   fireflies as AnySimulation,
   grayScott as AnySimulation,
+  ising as AnySimulation,
+  dilemma as AnySimulation,
+  wealth as AnySimulation,
 ];
 
 export function simById(id: string): AnySimulation | undefined {
