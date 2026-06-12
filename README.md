@@ -58,6 +58,8 @@ That makes these little worlds a useful intuition pump for any system of interac
 | **Cyclic Dominance** | Rock-paper-scissors with your neighbors | Interlocking rotating spiral territories |
 | **Maxwell–Boltzmann Gas** | Disks collide elastically, nothing else | One starting speed → the temperature bell curve |
 | **Snowflake** | Freeze at the ice edge; vapor diffuses elsewhere | Six-fold dendritic crystals (Reiter) |
+| **Associative Memory** | Each neuron flips to agree with the crowd | Hopfield recall: corrupted input → stored picture |
+| **Termite Sorting** | Pick up lone chips, drop them near piles | Scattered litter tidies itself into heaps |
 
 ![Cyclic dominance spirals](docs/screenshot-rps.png)
 
@@ -76,6 +78,7 @@ Agent-based modeling is the older sibling of today's LLM multi-agent patterns, a
 - **Thresholds (Epidemic's R₀)** — spread processes flip sharply at a critical value rather than degrading gracefully. Whether an error (or a meme, or a retry storm) dies out or takes over the fleet depends on whether each instance triggers more or less than one successor.
 - **Consensus without a leader (Fireflies)** — agents converge on shared timing purely by nudging toward what they observe locally. Distributed systems use the same trick (gossip protocols, clock sync); so does any agent ensemble that iterates toward agreement instead of electing an arbiter.
 - **Bounded confidence (Opinion Dynamics)** — agents that only update on inputs close to their current position fragment into camps that never reconcile. A panel of judge agents that each anchor on their first impression behaves the same way; diversity of starting prompts plus a wide acceptance window is what keeps synthesis possible.
+- **Attractor memory (Associative Memory)** — a Hopfield net stores patterns as energy minima and recalls a whole one from a corrupted fragment by sliding downhill. It is the direct ancestor of modern content-addressable memory, and modern attention is a continuous relative: both retrieve "the stored thing this input is closest to." Watching one settle is a concrete picture of what "recall" means mechanically.
 
 The difference from MultiAgentLab (the sibling project): there, intelligence lives *in* the agents and the structure is orchestrated. Here, the agents are trivially dumb and all the intelligence is *in the interaction*. Real multi-agent LLM systems are both at once — which is exactly why they surprise you.
 
