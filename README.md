@@ -56,6 +56,8 @@ That makes these little worlds a useful intuition pump for any system of interac
 | **Turmites** | Langton's ant with one bit of memory | Tapestries, coral, and highways from 4-line programs |
 | **Slime Mold** | Sniff the trail ahead, turn toward it, deposit more | Self-optimizing transport networks (Physarum) |
 | **Cyclic Dominance** | Rock-paper-scissors with your neighbors | Interlocking rotating spiral territories |
+| **Maxwell–Boltzmann Gas** | Disks collide elastically, nothing else | One starting speed → the temperature bell curve |
+| **Snowflake** | Freeze at the ice edge; vapor diffuses elsewhere | Six-fold dendritic crystals (Reiter) |
 
 ![Cyclic dominance spirals](docs/screenshot-rps.png)
 

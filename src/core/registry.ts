@@ -27,6 +27,8 @@ import { vicsek } from "../sims/vicsek.js";
 import { turmite } from "../sims/turmite.js";
 import { physarum } from "../sims/physarum.js";
 import { rps } from "../sims/rps.js";
+import { gas } from "../sims/gas.js";
+import { snowflake } from "../sims/snowflake.js";
 
 export const sims: AnySimulation[] = [
   life as AnySimulation,
@@ -57,6 +59,8 @@ export const sims: AnySimulation[] = [
   turmite as AnySimulation,
   physarum as AnySimulation,
   rps as AnySimulation,
+  gas as AnySimulation,
+  snowflake as AnySimulation,
 ];
 
 export function simById(id: string): AnySimulation | undefined {
