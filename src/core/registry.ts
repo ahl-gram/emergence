@@ -33,6 +33,7 @@ import { hopfield } from "../sims/hopfield.js";
 import { termites } from "../sims/termites.js";
 import { fluid } from "../sims/fluid.js";
 import { ripple } from "../sims/ripple.js";
+import { evolveImage } from "../sims/evolveimage.js";
 
 export const sims: AnySimulation[] = [
   life as AnySimulation,
@@ -69,6 +70,7 @@ export const sims: AnySimulation[] = [
   termites as AnySimulation,
   fluid as AnySimulation,
   ripple as AnySimulation,
+  evolveImage as AnySimulation,
 ];
 
 export function simById(id: string): AnySimulation | undefined {

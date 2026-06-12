@@ -11,7 +11,7 @@ An interactive agent-based modeling playground: the classic emergence simulation
 ```bash
 npm install   # dev deps only: typescript + @types/node
 npm start     # build + serve → http://localhost:4173
-npm test      # full suite via node:test (176 tests and counting)
+npm test      # the full suite via node:test — every sim is deterministic, so behavior is asserted exactly
 ```
 
 Keyboard: **space** play/pause · **s** single step · **r** reset. Several sims respond to the mouse (draw cells in Life, drop food for the ants, paint sand/water/walls, start fires).
@@ -62,6 +62,7 @@ That makes these little worlds a useful intuition pump for any system of interac
 | **Termite Sorting** | Pick up lone chips, drop them near piles | Scattered litter tidies itself into heaps |
 | **Vortex Street** | Collide toward equilibrium, stream to neighbors | Lattice-Boltzmann flow shedding von Kármán vortices |
 | **Wave Interference** | Nudge toward the neighbor average, a beat later | Double-slit diffraction fringes |
+| **Evolving Pictures** | Breed the best matches, mutate, repeat | Cumulative selection assembles a target from noise |
 
 ![Cyclic dominance spirals](docs/screenshot-rps.png)
 
