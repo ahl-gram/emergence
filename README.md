@@ -61,6 +61,7 @@ That makes these little worlds a useful intuition pump for any system of interac
 | **Associative Memory** | Each neuron flips to agree with the crowd | Hopfield recall: corrupted input → stored picture |
 | **Termite Sorting** | Pick up lone chips, drop them near piles | Scattered litter tidies itself into heaps |
 | **Vortex Street** | Collide toward equilibrium, stream to neighbors | Lattice-Boltzmann flow shedding von Kármán vortices |
+| **Wave Interference** | Nudge toward the neighbor average, a beat later | Double-slit diffraction fringes |
 
 ![Cyclic dominance spirals](docs/screenshot-rps.png)
 
