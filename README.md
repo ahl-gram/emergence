@@ -52,6 +52,8 @@ That makes these little worlds a useful intuition pump for any system of interac
 | **Percolation** | Random pores; water soaks from the top | An all-or-nothing breakthrough at p ≈ 0.593 |
 | **Punctuated Equilibrium** | Replace the weakest species and its neighbors | Bak–Sneppen extinction avalanches; stasis then upheaval |
 | **Spiral Waves** | Advance a phase only when a neighbor leads you | Rotating BZ-reaction / heart-tissue spirals |
+| **Active Matter** | Self-propelled particles align with neighbors + noise | The Vicsek flocking phase transition |
+| **Turmites** | Langton's ant with one bit of memory | Tapestries, coral, and highways from 4-line programs |
 
 Each sim's sidebar explains its rule and suggests an experiment (`try:`). The chart below the canvas plots the system's *order parameter* over time — watching polarization climb as a flock forms, or the predator-prey waves chase each other, is half the fun.
 

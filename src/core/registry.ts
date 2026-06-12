@@ -23,6 +23,8 @@ import { gravity } from "../sims/gravity.js";
 import { percolation } from "../sims/percolation.js";
 import { evolution } from "../sims/evolution.js";
 import { spirals } from "../sims/spirals.js";
+import { vicsek } from "../sims/vicsek.js";
+import { turmite } from "../sims/turmite.js";
 
 export const sims: AnySimulation[] = [
   life as AnySimulation,
@@ -49,6 +51,8 @@ export const sims: AnySimulation[] = [
   percolation as AnySimulation,
   evolution as AnySimulation,
   spirals as AnySimulation,
+  vicsek as AnySimulation,
+  turmite as AnySimulation,
 ];
 
 export function simById(id: string): AnySimulation | undefined {
