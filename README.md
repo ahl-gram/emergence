@@ -6,6 +6,8 @@
 
 An interactive agent-based modeling playground: the classic emergence simulations, each one a pure-TypeScript state machine with a canvas front end. No frameworks, no runtime dependencies, no build tooling beyond `tsc`. Every run is seeded and exactly reproducible — which is also what makes the test suite honest.
 
+**▶ Live demo: [ahl-gram.github.io/emergence](https://ahl-gram.github.io/emergence/)**
+
 ```bash
 npm install   # dev deps only: typescript + @types/node
 npm start     # build + serve → http://localhost:4173
