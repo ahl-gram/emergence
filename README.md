@@ -11,7 +11,7 @@ An interactive agent-based modeling playground: the classic emergence simulation
 ```bash
 npm install   # dev deps only: typescript + @types/node
 npm start     # build + serve → http://localhost:4173
-npm test      # 121 tests via node:test
+npm test      # full suite via node:test (176 tests and counting)
 ```
 
 Keyboard: **space** play/pause · **s** single step · **r** reset. Several sims respond to the mouse (draw cells in Life, drop food for the ants, paint sand/water/walls, start fires).
