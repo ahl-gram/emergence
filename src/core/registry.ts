@@ -17,6 +17,9 @@ import { brain } from "../sims/brain.js";
 import { ising } from "../sims/ising.js";
 import { dilemma } from "../sims/dilemma.js";
 import { wealth } from "../sims/wealth.js";
+import { opinions } from "../sims/opinions.js";
+import { pedestrians } from "../sims/pedestrians.js";
+import { gravity } from "../sims/gravity.js";
 
 export const sims: AnySimulation[] = [
   life as AnySimulation,
@@ -37,6 +40,9 @@ export const sims: AnySimulation[] = [
   ising as AnySimulation,
   dilemma as AnySimulation,
   wealth as AnySimulation,
+  opinions as AnySimulation,
+  pedestrians as AnySimulation,
+  gravity as AnySimulation,
 ];
 
 export function simById(id: string): AnySimulation | undefined {

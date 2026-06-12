@@ -46,6 +46,9 @@ That makes these little worlds a useful intuition pump for any system of interac
 | **Ising Magnet** | Agree with your neighbors, unless heat flips you | A sharp phase transition at T ≈ 2.27 |
 | **Cooperation Wars** | Play Prisoner's Dilemma, copy your best neighbor | Cooperation surviving in fractal clusters |
 | **Wealth Condensation** | Wager a slice of the poorer partner's wealth, fair coin | Extreme inequality from perfectly fair rules |
+| **Opinion Dynamics** | Compromise only with views near your own | Echo chambers; zealots dragging the middle |
+| **Pedestrian Lanes** | Step forward; dodge toward the clearer side | One-way lanes, no choreographer |
+| **Gravity Clumps** | Every speck pulls on every other | Galaxy formation in miniature |
 
 Each sim's sidebar explains its rule and suggests an experiment (`try:`). The chart below the canvas plots the system's *order parameter* over time — watching polarization climb as a flock forms, or the predator-prey waves chase each other, is half the fun.
 
@@ -61,6 +64,7 @@ Agent-based modeling is the older sibling of today's LLM multi-agent patterns, a
 - **Criticality (Forest Fire, Sandpile)** — systems that accumulate tension release it in power-law bursts: mostly small cascades, rarely huge ones. Queues, dependency graphs, and agent pipelines with feedback all live near this regime. The absence of large failures for a long time is not evidence they can't happen; it's often evidence fuel is accumulating.
 - **Thresholds (Epidemic's R₀)** — spread processes flip sharply at a critical value rather than degrading gracefully. Whether an error (or a meme, or a retry storm) dies out or takes over the fleet depends on whether each instance triggers more or less than one successor.
 - **Consensus without a leader (Fireflies)** — agents converge on shared timing purely by nudging toward what they observe locally. Distributed systems use the same trick (gossip protocols, clock sync); so does any agent ensemble that iterates toward agreement instead of electing an arbiter.
+- **Bounded confidence (Opinion Dynamics)** — agents that only update on inputs close to their current position fragment into camps that never reconcile. A panel of judge agents that each anchor on their first impression behaves the same way; diversity of starting prompts plus a wide acceptance window is what keeps synthesis possible.
 
 The difference from MultiAgentLab (the sibling project): there, intelligence lives *in* the agents and the structure is orchestrated. Here, the agents are trivially dumb and all the intelligence is *in the interaction*. Real multi-agent LLM systems are both at once — which is exactly why they surprise you.
 
