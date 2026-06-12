@@ -49,6 +49,7 @@ That makes these little worlds a useful intuition pump for any system of interac
 | **Opinion Dynamics** | Compromise only with views near your own | Echo chambers; zealots dragging the middle |
 | **Pedestrian Lanes** | Step forward; dodge toward the clearer side | One-way lanes, no choreographer |
 | **Gravity Clumps** | Every speck pulls on every other | Galaxy formation in miniature |
+| **Percolation** | Random pores; water soaks from the top | An all-or-nothing breakthrough at p ≈ 0.593 |
 
 Each sim's sidebar explains its rule and suggests an experiment (`try:`). The chart below the canvas plots the system's *order parameter* over time — watching polarization climb as a flock forms, or the predator-prey waves chase each other, is half the fun.
 
