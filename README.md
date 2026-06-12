@@ -60,6 +60,7 @@ That makes these little worlds a useful intuition pump for any system of interac
 | **Snowflake** | Freeze at the ice edge; vapor diffuses elsewhere | Six-fold dendritic crystals (Reiter) |
 | **Associative Memory** | Each neuron flips to agree with the crowd | Hopfield recall: corrupted input → stored picture |
 | **Termite Sorting** | Pick up lone chips, drop them near piles | Scattered litter tidies itself into heaps |
+| **Vortex Street** | Collide toward equilibrium, stream to neighbors | Lattice-Boltzmann flow shedding von Kármán vortices |
 
 ![Cyclic dominance spirals](docs/screenshot-rps.png)
 

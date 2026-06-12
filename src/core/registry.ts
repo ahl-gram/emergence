@@ -31,6 +31,7 @@ import { gas } from "../sims/gas.js";
 import { snowflake } from "../sims/snowflake.js";
 import { hopfield } from "../sims/hopfield.js";
 import { termites } from "../sims/termites.js";
+import { fluid } from "../sims/fluid.js";
 
 export const sims: AnySimulation[] = [
   life as AnySimulation,
@@ -65,6 +66,7 @@ export const sims: AnySimulation[] = [
   snowflake as AnySimulation,
   hopfield as AnySimulation,
   termites as AnySimulation,
+  fluid as AnySimulation,
 ];
 
 export function simById(id: string): AnySimulation | undefined {
