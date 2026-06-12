@@ -21,6 +21,8 @@ import { opinions } from "../sims/opinions.js";
 import { pedestrians } from "../sims/pedestrians.js";
 import { gravity } from "../sims/gravity.js";
 import { percolation } from "../sims/percolation.js";
+import { evolution } from "../sims/evolution.js";
+import { spirals } from "../sims/spirals.js";
 
 export const sims: AnySimulation[] = [
   life as AnySimulation,
@@ -45,6 +47,8 @@ export const sims: AnySimulation[] = [
   pedestrians as AnySimulation,
   gravity as AnySimulation,
   percolation as AnySimulation,
+  evolution as AnySimulation,
+  spirals as AnySimulation,
 ];
 
 export function simById(id: string): AnySimulation | undefined {
