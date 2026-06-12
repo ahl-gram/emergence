@@ -20,6 +20,8 @@ const NEG: [number, number, number] = [70, 150, 255];
 const ZERO: [number, number, number] = [9, 12, 18];
 const POS: [number, number, number] = [255, 120, 90];
 const C_WALL = rgb(70, 78, 92);
+// render scratch grid, allocated once; the color closure reads `u`, not cells
+const RENDER_GRID = { w: W, h: H, cells: new Int16Array(W * H) };
 
 function buildBarrier(slits: number, gap: number, width: number): Uint8Array {
   const b = new Uint8Array(W * H);
@@ -113,7 +115,7 @@ export const ripple: Simulation<RippleState> = {
   render(s, ctx, view) {
     const u = s.u;
     const barrier = s.barrier;
-    paintGrid(ctx, view, { w: W, h: H, cells: new Int16Array(W * H) }, "ripple", (_v, i) => {
+    paintGrid(ctx, view, RENDER_GRID, "ripple", (_v, i) => {
       if (barrier[i]) return C_WALL;
       const a = u[i];
       const t = Math.max(-1, Math.min(1, a * 1.4));

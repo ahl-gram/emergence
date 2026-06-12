@@ -19,6 +19,8 @@ const HIT = rgb(122, 215, 255);
 const MISS_ON = rgb(60, 80, 110); // genome says on, target says off
 const MISS_OFF = rgb(40, 30, 30); // genome says off, target says on
 const OFF = rgb(12, 14, 20);
+// render scratch grid, allocated once; the color closure reads the genome, not cells
+const RENDER_GRID = { w: N, h: N, cells: new Int16Array(CELLS) };
 
 function makeTarget(kind: number): Uint8Array {
   const t = new Uint8Array(CELLS);
@@ -146,7 +148,7 @@ export const evolveImage: Simulation<EvolveState> = {
   render(s, ctx, view) {
     const g = s.population[s.bestIdx];
     const target = s.target;
-    paintGrid(ctx, view, { w: N, h: N, cells: new Int16Array(CELLS) }, "evolve", (_v, i) => {
+    paintGrid(ctx, view, RENDER_GRID, "evolve", (_v, i) => {
       const on = g[i] === 1;
       const want = target[i] === 1;
       if (on && want) return HIT;

@@ -27,6 +27,11 @@ const POS: [number, number, number] = [255, 100, 80];
 const NEG: [number, number, number] = [90, 170, 255];
 const MID: [number, number, number] = [12, 16, 24];
 
+// render scratch buffers, allocated once (reused every frame to avoid GC churn)
+const RENDER_UX = new Float32Array(W * H);
+const RENDER_UY = new Float32Array(W * H);
+const RENDER_GRID = { w: W, h: H, cells: new Int16Array(W * H) };
+
 function isObstacle(x: number, y: number): boolean {
   const dx = x - CYL_X;
   const dy = y - CYL_Y;
@@ -137,8 +142,8 @@ export const fluid: Simulation<FluidState> = {
 
   render(s, ctx, view) {
     const f = s.f;
-    const ux = new Float32Array(W * H);
-    const uy = new Float32Array(W * H);
+    const ux = RENDER_UX;
+    const uy = RENDER_UY;
     for (let cell = 0; cell < W * H; cell++) {
       const base = cell * Q;
       let rho = 0;
@@ -150,12 +155,11 @@ export const fluid: Simulation<FluidState> = {
         x += EX[i] * fi;
         y += EY[i] * fi;
       }
-      if (rho > 0) { ux[cell] = x / rho; uy[cell] = y / rho; }
+      ux[cell] = rho > 0 ? x / rho : 0;
+      uy[cell] = rho > 0 ? y / rho : 0;
     }
 
-    const cells = new Int16Array(W * H); // unused values; we color via closure
-    const colorGrid = { w: W, h: H, cells };
-    paintGrid(ctx, view, colorGrid, "fluid", (_v, cell) => {
+    paintGrid(ctx, view, RENDER_GRID, "fluid", (_v, cell) => {
       const x = cell % W;
       const y = (cell - x) / W;
       if (isObstacle(x, y)) return rgb(40, 44, 54);
