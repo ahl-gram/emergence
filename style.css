@@ -169,3 +169,78 @@ main { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
   #app { grid-template-columns: 1fr; }
   #sidebar { position: static; max-height: none; }
 }
+
+/* --- landing / gallery --- */
+
+#landing {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+}
+
+#landing-head { text-align: center; margin-bottom: 30px; }
+#landing-head h1 {
+  margin: 0;
+  font-size: 40px;
+  letter-spacing: 1px;
+  color: var(--accent);
+}
+#landing-head .tagline { margin: 4px 0 0; color: var(--dim); font-size: 15px; }
+#landing-head .intro {
+  max-width: 640px;
+  margin: 20px auto 0;
+  color: var(--text);
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+#landing-head .intro #simcount { color: var(--accent); font-weight: 600; }
+
+#gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--text);
+  transition: border-color 0.12s, transform 0.12s;
+}
+.card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+.card canvas {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #000;
+  border-bottom: 1px solid var(--border);
+  image-rendering: pixelated;
+}
+.card-body { padding: 9px 11px 11px; }
+.card-name { font-size: 14px; font-weight: 600; }
+.card-blurb { font-size: 12px; color: var(--dim); margin-top: 2px; line-height: 1.35; }
+
+#landing-foot {
+  text-align: center;
+  margin-top: 34px;
+  font-size: 12px;
+  color: var(--dim);
+}
+#landing-foot a { color: var(--accent); }
+
+#gallerybtn {
+  display: inline-block;
+  font-size: 12px;
+  color: var(--dim);
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+#gallerybtn:hover { color: var(--accent); }
